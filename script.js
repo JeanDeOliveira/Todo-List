@@ -40,14 +40,14 @@ function addTodo(event){
 		todoList.addEventListener('click', (e)=>{
 			const item = e.target;
 
-			if(item.classList[0] === 'trash'){
-				const todo = item.parentElement;
-				todo.remove()
-			}
-
 			if(item.classList[0] === "complete"){
 				const todo = item.parentElement;
 				todo.classList.toggle("completed")
+			}
+
+			if(item.classList[0] === 'trash'){
+				const todo = item.parentElement;
+				todo.remove()
 			}
 		})
 	}
