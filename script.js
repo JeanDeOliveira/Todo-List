@@ -7,10 +7,12 @@ todoButton.addEventListener('click', addTodo)
 
 function addTodo(event){
 	event.preventDefault()
-	//div
-	if(todoInput.value == 0){
-		alert('digite sua tarefa')
-		return false
+	
+	const inputValue = todoInput.value
+
+	if(inputValue.length >= 50){
+		alert('muito grande!')
+		return false;
 	}else{
 		const todoDiv = document.createElement('div')
 		todoList.appendChild(todoDiv)
