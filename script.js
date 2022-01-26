@@ -8,6 +8,9 @@ todoButton.addEventListener('click', addTodo)
 function addTodo(event){
 	event.preventDefault()
 	//div
+	if(todoInput.value === 0){
+		alert('digite sua tarefa')
+	}
 	const todoDiv = document.createElement('div')
 	todoList.appendChild(todoDiv)
 	todoDiv.classList.add("todo")
